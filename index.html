@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MALIKA Toyxonasi — Sirdaryo tumani | Professional To'y Xizmatlari</title>
+    <meta name="description" content="MALIKA Toyxonasi - Sirdaryo tumanidagi eng chiroyli va ishonchli toyxona. 500+ muvaffaqiyatli to'y, 500 mehmon sig'imi, 10+ yillik tajriba.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            100: '#F9F1D8',
+                            200: '#F0DEAA',
+                            300: '#E6CB7D',
+                            400: '#DDB850',
+                            500: '#D4AF37',
+                            600: '#AA8C2C',
+                            700: '#806921',
+                            800: '#554616',
+                            900: '#2B230B',
+                        },
+                        burgundy: {
+                            100: '#F5E6E8',
+                            200: '#EACCD4',
+                            300: '#DFB3C0',
+                            400: '#D499AC',
+                            500: '#C97F98',
+                            600: '#BE6684',
+                            700: '#B34C70',
+                            800: '#8C3C58',
+                            900: '#662C40',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-gold {
+            background: linear-gradient(135deg, #D4AF37 0%, #AA8C2C 50%, #D4AF37 100%);
+        }
+        
+        .gradient-burgundy {
+            background: linear-gradient(135deg, #8C3C58 0%, #662C40 100%);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #D4AF37 0%, #AA8C2C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-pattern {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #D4AF37 0%, #AA8C2C 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            backdrop-filter: blur(5px);
+        }
+        
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        .nav-scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        .nav-scrolled .nav-link {
+            color: #1f2937;
+        }
+        
+        .nav-scrolled .logo-text {
+            color: #D4AF37;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .counter {
+            font-variant-numeric: tabular-nums;
+        }
+
+        .menu-tab.active {
+            background: linear-gradient(135deg, #D4AF37 0%, #AA8C2C 100%);
+            color: white;
+        }
+
+        .menu-item {
+            transition: all 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-3xl font-serif font-bold logo-text text-white transition-colors duration-300">
+                    ✦ MALIKA
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#xizmatlar" class="nav-link text-white hover:text-gold-400 transition-colors font-medium">Xizmatlar</a>
+                    <a href="#menyu" class="nav-link text-white hover:text-gold-400 transition-colors font-medium">Menyu</a>
+                    <a href="#vidograf" class="nav-link text-white hover:text-gold-400 transition-colors font-medium">Vidograf & Artist</a>
+                    <a href="#telegram" class="nav-link text-white hover:text-gold-400 transition-colors font-medium">Telegram Bot</a>
+                    <a href="#aloqa" class="nav-link text-white hover:text-gold-400 transition-colors font-medium">Aloqa</a>
+                    <a href="tel:+998951558784" class="btn-primary text-white px-6 py-2 rounded-full font-semibold">
+                        <i class="fas fa-phone mr-2"></i>95-155-8784
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white nav-link text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 bg-white rounded-lg shadow-xl p-4">
+                <a href="#xizmatlar" class="block py-2 text-gray-800 hover:text-gold-600">Xizmatlar</a>
+                <a href="#menyu" class="block py-2 text-gray-800 hover:text-gold-600">Menyu</a>
+                <a href="#vidograf" class="block py-2 text-gray-800 hover:text-gold-600">Vidograf & Artist</a>
+                <a href="#telegram" class="block py-2 text-gray-800 hover:text-gold-600">Telegram Bot</a>
+                <a href="#aloqa" class="block py-2 text-gray-800 hover:text-gold-600">Aloqa</a>
+                <a href="tel:+998951558784" class="block mt-2 btn-primary text-white text-center py-2 rounded-lg">
+                    <i class="fas fa-phone mr-2"></i>95-155-8784
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern min-h-screen flex items-center justify-center relative">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/30"></div>
+        
+        <div class="container mx-auto px-4 text-center text-white relative z-10" data-aos="fade-up">
+            <div class="mb-6 float-animation">
+                <span class="text-gold-400 text-lg md:text-xl font-medium tracking-widest uppercase block mb-2">
+                    ✦ Sirdaryo tumani · Ulug'bek mahallasi
+                </span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-serif font-bold mb-6 leading-tight">
+                MALIKA<br>
+                <span class="text-gradient text-gold-300">TOYXONASI</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto font-light italic">
+                Har bir bayramni unutilmas lahzaga aylantiramiz
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center mb-12">
+                <div class="flex items-center gap-2 text-white/90">
+                    <i class="fas fa-map-marker-alt text-gold-400 text-xl"></i>
+                    <span>Sirdaryo tumani, Ulug'bek mahallasi</span>
+                </div>
+                <span class="hidden md:inline text-gold-400">|</span>
+                <a href="tel:+998951558784" class="flex items-center gap-2 text-white hover:text-gold-400 transition-colors">
+                    <i class="fas fa-phone text-gold-400 text-xl"></i>
+                    <span class="text-xl font-semibold">95-155-8784</span>
+                </a>
+            </div>
+            
+            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 max-w-3xl mx-auto mb-10 border border-white/20">
+                <p class="text-gold-300 text-sm uppercase tracking-wider mb-2">To'liq paket narxi</p>
+                <p class="text-3xl md:text-5xl font-bold text-white mb-3">60 000 000 so'm</p>
+                <p class="text-white/80 text-sm md:text-base">Vidograf va Artist bundan tashqari · Alohida kelishiladi</p>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#zakaz" class="btn-primary text-white px-10 py-4 rounded-full text-lg font-semibold inline-flex items-center gap-2 group">
+                    Zakaz bering
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="#menyu" onclick="openMenuModal()" class="bg-white text-gray-900 px-10 py-4 rounded-full text-lg font-semibold hover:bg-gold-100 transition-colors inline-flex items-center gap-2">
+                    <i class="fas fa-utensils"></i>
+                    Menyuni ko'rish
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#stats" class="text-white/70 hover:text-white transition-colors">
+                <i class="fas fa-chevron-down text-3xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="0">
+                    <div class="text-4xl md:text-5xl font-bold text-gradient mb-2 counter" data-target="500">0</div>
+                    <div class="text-gray-600 font-medium">Muvaffaqiyatli to'y</div>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-4xl md:text-5xl font-bold text-gradient mb-2 counter" data-target="500">0</div>
+                    <div class="text-gray-600 font-medium">Mehmon sig'imi</div>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-4xl md:text-5xl font-bold text-gradient mb-2 counter" data-target="10">0</div>
+                    <div class="text-gray-600 font-medium">Yillik tajriba</div>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-4xl md:text-5xl font-bold text-gradient mb-2">4.9<span class="text-2xl">★</span></div>
+                    <div class="text-gray-600 font-medium">Mijozlar bahosi</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="xizmatlar" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">Xizmatlar & Narxlar</h2>
+                <div class="w-24 h-1 gradient-gold mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Sizning bayramingiz uchun barcha xizmatlar - bir joyda</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Osh To'y -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover" data-aos="fade-up" data-aos-delay="0">
+                    <div class="h-48 bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
+                        <i class="fas fa-utensils text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-2xl font-serif font-bold text-gray-900">Osh To'y</h3>
+                            <span class="bg-gold-100 text-gold-800 px-3 py-1 rounded-full text-sm font-semibold">🎊</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">An'anaviy osh to'yi — qozon oshi, milliy musiqa, bezatilgan zal. Kelin-kuyov uchun maxsus joy.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-gradient">6 000 000 so'm</span>
+                            <button onclick="selectService('Osh To\'y')" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-semibold">
+                                Tanlash
+                            </button>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-2">To'liq paket · mehmonlar soni kelishiladi</p>
+                    </div>
+                </div>
+
+                <!-- Sunnat To'yi -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 bg-gradient-to-br from-burgundy-600 to-burgundy-800 flex items-center justify-center">
+                        <i class="fas fa-pray text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-2xl font-serif font-bold text-gray-900">Sunnat To'yi</h3>
+                            <span class="bg-burgundy-100 text-burgundy-800 px-3 py-1 rounded-full text-sm font-semibold">🌙</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Milliy urf-odatlarga mos holda o'tkaziladigan sunnat to'yi. Xudoyi dasturxoni bilan.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-gradient">6 000 000 so'm</span>
+                            <button onclick="selectService('Sunnat To\'yi')" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-semibold">
+                                Tanlash
+                            </button>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-2">Xudoyi bilan birga</p>
+                    </div>
+                </div>
+
+                <!-- Xudoyi / Gap -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center">
+                        <i class="fas fa-hands-praying text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-2xl font-serif font-bold text-gray-900">Xudoyi / Gap</h3>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">🙏</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Kichik va katta xudoyilar uchun alohida joy. Ovqat, xizmat va bezak bilan.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-gradient">Kelishiladi</span>
+                            <button onclick="selectService('Xudoyi / Gap')" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-semibold">
+                                Tanlash
+                            </button>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-2">Mehmonlar soniga qarab narx</p>
+                    </div>
+                </div>
+
+                <!-- Premium Paket -->
+                <div class="md:col-span-2 lg:col-span-3 bg-gradient-to-r from-gold-600 via-gold-500 to-gold-600 rounded-2xl overflow-hidden shadow-2xl card-hover relative" data-aos="zoom-in">
+                    <div class="absolute top-0 right-0 bg-white text-gold-600 px-6 py-2 rounded-bl-2xl font-bold text-lg">
+                        <i class="fas fa-crown mr-2"></i>PREMIUM 👑
+                    </div>
+                    <div class="p-8 md:p-12">
+                        <div class="flex flex-col md:flex-row items-center gap-8">
+                            <div class="flex-1 text-white">
+                                <h3 class="text-3xl md:text-4xl font-serif font-bold mb-4">To'liq Premium Paket</h3>
+                                <p class="text-white/90 text-lg mb-6">Hammasi bor — bezak, ovqat, musiqa, xizmatchilar, transport va boshqalar. Siz faqat keling!</p>
+                                <ul class="space-y-2 text-white/90 mb-6">
+                                    <li><i class="fas fa-check mr-2"></i>Professional zal bezatish</li>
+                                    <li><i class="fas fa-check mr-2"></i>To'liq dasturxon (barcha ovqatlar)</li>
+                                    <li><i class="fas fa-check mr-2"></i>Tajribali xizmatchilar</li>
+                                    <li><i class="fas fa-check mr-2"></i>Musiqiy texnika va yoritish</li>
+                                    <li><i class="fas fa-check mr-2"></i>Kelin-kuyov uchun transport</li>
+                                </ul>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-4xl md:text-5xl font-bold text-white mb-2">60 000 000 so'm</div>
+                                <p class="text-white/80 text-sm mb-6">Vidograf va Artist bundan tashqari</p>
+                                <button onclick="selectService('To\'liq premium paket')" class="bg-white text-gold-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gold-100 transition-colors shadow-xl">
+                                    Buyurtma berish
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Batafsil Menu Section -->
+    <section id="menyu" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block bg-gold-100 text-gold-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    🍽️ Professional Oshxona
+                </span>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
+                    To'liq Milliy Menyu
+                </h2>
+                <div class="w-24 h-1 gradient-gold mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+                    An'anaviy o'zbek taomlari — eng yuqori sifat, toza mahsulotlar va professional oshpazlar tomonidan tayyorlanadi
+                </p>
+            </div>
+
+            <!-- Menu Categories -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12" data-aos="fade-up">
+                <button class="menu-tab active px-6 py-3 rounded-full bg-gold-500 text-white font-medium shadow-lg" data-category="all">
+                    🍽️ Barchasi
+                </button>
+                <button class="menu-tab px-6 py-3 rounded-full bg-white text-gray-700 font-medium hover:bg-gold-100 transition-colors shadow" data-category="asosiy">
+                    🍚 Asosiy Taomlar
+                </button>
+                <button class="menu-tab px-6 py-3 rounded-full bg-white text-gray-700 font-medium hover:bg-gold-100 transition-colors shadow" data-category="shorva">
+                    🥣 Sho'rvalar
+                </button>
+                <button class="menu-tab px-6 py-3 rounded-full bg-white text-gray-700 font-medium hover:bg-gold-100 transition-colors shadow" data-category="kabob">
+                    🍢 Kaboblar
+                </button>
+                <button class="menu-tab px-6 py-3 rounded-full bg-white text-gray-700 font-medium hover:bg-gold-100 transition-colors shadow" data-category="salat">
+                    🥗 Salatlar
+                </button>
+                <button class="menu-tab px-6 py-3 rounded-full bg-white text-gray-700 font-medium hover:bg-gold-100 transition-colors shadow" data-category="shirinlik">
+                    🍰 Shirinliklar
+                </button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Osh (Palov) -->
+                <div class="menu-item bg-white rounded-2xl overflow-hidden shadow-lg card-hover group" data-category="asosiy" data-aos="fade-up">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1606756790138-7c48643e2977?w=600&h=400&fit=crop" alt="O'zbek Palovi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-gradient-to-r from-gold-500 to-gold-600 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
+                            🔥 Bestseller
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Osh (Palov)</h3>
+                        <p class="text-gray-600 text-sm mb-3">An'anaviy Sirdaryo usulida tayyorlangan palov — dumba yog'i, sariq sabzi, no'xat, mayiz va qo'zilik go'shti bilan.</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                            <span class="text-gold-600 font-bold">To'y paketiga kiradi</span>
+                            <span class="text-sm text-gray-500"><i class="fas fa-weight-hanging mr-1"></i>350g</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Manti -->
+                <div class="menu-item bg-white rounded-2xl overflow-hidden shadow-lg card-hover group" data-category="asosiy" data-aos="fade-up" data-aos-delay="50">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1563379928570-0162f846a2e3?w=600&h=400&fit=crop" alt="Manti" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Manti</h3>
+                        <p class="text-gray-600 text-sm mb-3">Qo'lda yoyilgan xamir, mayda to'g'ralgan qo'y go'shti va piyoz bilan to'ldirilgan, bug'da 45 daqiqa pishirilgan.</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                            <span class="text-gold-600 font-bold">To'y paketiga kiradi</span>
+                            <span class="text-sm text-gray-500"><i class="fas fa-weight-hanging mr-1"></i>4 dona</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dimlama -->
+                <div class="menu-item bg-white rounded-2xl overflow-hidden shadow-lg card-hover group" data-category="asosiy" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop" alt="Dimlama" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Dimlama</h3>
+                        <p class="text-gray-600 text-sm mb-3">Qozonda sekin pishirilgan mol go'shti, kartoshka, sabzi, piyoz va ko'katlar bilan.</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                            <span class="text-gold-600 font-bold">To'y paketiga kiradi</span>
+                            <span class="text-sm text-gray-500"><i class="fas fa-weight-hanging mr-1"></i>400g</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- No'xot Sho'rva -->
+                <div class="menu-item bg-white rounded-2xl overflow-hidden shadow-lg card-hover group" data-category="shorva" data-aos="fade-up" data-aos-delay="150">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&h=400&fit=crop" alt="No'xot Sho'rva" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                            🌿 Sog'lom
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">No'xot Sho'rva</h3>
+                        <p class="text-gray-600 text-sm mb-3">Oldindan ivitilgan no'xot, qo'zilik suyagi va sabzavotlar bilan 4 soat davomida sekin pishirilgan.</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                            <span class="text-gold-600 font-bold">To'y paketiga kiradi</span>
+                            <span class="text-sm text-gray-500"><i class="fas fa-bowl-food mr-1"></i>350ml</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Napar Sho'rva -->
+                <div class="menu-item bg-white rounded-2xl overflow-hidden shadow-lg card-hover group" data-category="shorva" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=600&h=400&fit=crop" alt="Napar Sho'rva" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                            🏆 Maxsus
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Napar Sho'rva</h3>
+                        <p class="text-gray-600 text-sm mb-3">Sirdaryo viloyatining mashhur an'anaviy taomi — qalin xamir bo'laklari, mol go'shti va sabzavotlar bilan.</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                            <span class="text-gold-600 font-bold">To'y paketiga kiradi</span>
+                            <span class="text-sm text-gray-500"><i class="fas fa-bowl-food mr-1"></i>400ml</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lag'mon -->
+                <div class="menu-item bg-white rounded-2xl overflow-hidden shadow-lg card-hover group" data-category="shorva" data-aos="fade-up" data-aos-delay="250">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1552611052-33e04de081de?w=600&h=400&fit=crop" alt="Lag'mon" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Uy Lag'moni</h3>
+                        <p class="text-gray-600 text-sm mb-3">Qo'lda cho'zilgan xamir, mol go'shti, sabzavotlar va maxsus sous bilan tayyorlangan.</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                            <span class="text-gold-600 font-bold">To'y paketiga kiradi</span>
+                            <span class="text-sm text-gray-500"><i class="fas fa-weight-hanging mr-1"></i>450g</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mol Shashligi -->
+                <div class="menu-item bg-white rounded-2xl overflow-hidden shadow-lg card-hover group" data-category="kabob" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=600&h=400&fit=crop" alt="Mol Kabobi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Mol Shashligi</h3>
+                        <p class="text-gray-600 text-sm mb-3">Yangi so'yilgan mol go'shti, piyoz va maxsus ziravorlar bilan marinadlangan, ko'mir olovda pishirilgan.</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                            <span class="text-gold-600 font-bold">To'y paketiga kiradi</span>
+                            <span class="text-sm text-gray-500"><i class="fas fa-weight-hanging mr-1"></i>250g</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tovuq Kabobi -->
+                <div class="menu-item bg-white rounded-2xl overflow-hidden shadow-lg card-hover group" data-category="kabob" data-aos="fade-up" data-aos-delay="350">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=600&h=400&fit=crop" alt="Tovuq Kabobi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                            🍗 Yengil
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Tovuq Shashligi</h3>
+                        <p class="text-gray-600 text-sm mb-3">Tovuq filesi, yogurt va limon sharbati bilan marinadlangan, yumshoq va xushbo'y kabob.</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                            <span class="text-gold-600 font-bold">To'y paketiga kiradi</span>
+                            <span class="text-sm text-gray-500"><i class="fas fa-weight-hanging mr-1"></i>240g</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Jizza -->
+                <div class="menu-item bg-white rounded-2xl overflow-hidden shadow-lg card-hover group" data-category="kabob" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&h=400&fit=crop" alt="Jizza" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Jizza</h3>
+                        <p class="text-gray-600 text-sm mb-3">Qo'y jigari, piyoz va ziravorlar bilan qovurilgan, o'zbek milliy taomi.</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                            <span class="text-gold-600 font-bold">To'y paketiga kiradi</span>
+                            <span class="text-sm text-gray-500"><i class="fas fa-weight-hanging mr-1"></i>200g</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achchiq Sabzi -->
+                <div class="menu-item bg-white rounded-2xl overflow-hidden shadow-lg card-hover group" data-category="salat" data-aos="fade-up" data-aos-delay="450">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop" alt="Achchiq Sabzi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Achchiq Sabzi</h3>
+                        <p class="text-gray-600 text-sm mb-3">Yangi sabzi, piyoz, sirka va qizil qalampir bilan tayyorlangan an'anaviy o'zbek salati.</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                            <span class="text-gold-600 font-bold">To'y paketiga kiradi</span>
+                            <span class="text-sm text-gray-500"><i class="fas fa-weight-hanging mr-1"></i>150g</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shakarob -->
+                <div class="menu-item bg-white rounded-2xl overflow-hidden shadow-lg card-hover group" data-category="salat" data-aos="fade-up" data-aos-delay="500">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&h=400&fit=crop" alt="Shakarob" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute top-4 right-4 bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                            🥒 Vitamin
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Shakarob</h3>
+                        <p class="text-gray-600 text-sm mb-3">Pomidor, bodring, piyoz, ko'kat va o'simlik yog'i bilan tayyorlangan yengil va foydali salat.</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                            <span class="text-gold-600 font-bold">To'y paketiga kiradi</span>
+                            <span class="text-sm text-gray-500"><i class="fas fa-weight-hanging mr-1"></i>180g</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Qovurdoq -->
+                <div class="menu-item bg-white rounded-2xl overflow-hidden shadow-lg card-hover group" data-category="asosiy" data-aos="fade-up" data-aos-delay="550">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?w=600&h=400&fit=crop" alt="Qovurdoq" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Qovurdoq</h3>
+                        <p class="text-gray-600 text-sm mb-3">Qo'y go'shti, piyoz va sabzavotlar bilan qovurilgan, ziravorlar qo'shilgan to'yimli taom.</p>
+                        <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                            <span class="text-gold-600 font-bold">To'y paketiga kiradi</span>
+                            <span class="text-sm text-gray-500"><i class="fas fa-weight-hanging mr-1"></i>300g</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Menu Info Box -->
+            <div class="mt-12 bg-gradient-to-r from-gold-50 to-gold-100 rounded-2xl p-6 md:p-8 border border-gold-200" data-aos="fade-up">
+                <div class="flex flex-col md:flex-row items-center gap-6">
+                    <div class="flex-1">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">🍽️ Barcha taomlar to'y paketiga kiradi!</h4>
+                        <p class="text-gray-600">
+                            60 000 000 so'mlik to'liq paketga yuqoridagi barcha taomlar, salatlar va ichimliklar cheksiz miqdorda kiradi. 
+                            Mehmonlar soniga qarab ovqat miqdori moslashtiriladi.
+                        </p>
+                    </div>
+                    <a href="#zakaz" class="btn-primary text-white px-8 py-3 rounded-full font-semibold hover:shadow-xl transition-all whitespace-nowrap">
+                        Zakaz bering →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">Qo'shimcha xizmatlar</h2>
+                <div class="w-24 h-1 gradient-gold mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Zal Bezatish -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover" data-aos="fade-right">
+                    <div class="flex items-start gap-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-gold-400 to-gold-600 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-wand-magic-sparkles text-3xl text-white"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-serif font-bold text-gray-900 mb-2">Zal Bezatish</h3>
+                            <p class="text-gray-600 mb-4">Gul, shar, yorug'lik va archa bilan professional bezatish. Rang sxemasi mijoz tanlovida.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gold-600 font-semibold">Hajmga qarab narx belgilanadi</span>
+                                <button onclick="selectService('Zal bezatish')" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-semibold">
+                                    Buyurtma
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toastmaster -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover" data-aos="fade-left">
+                    <div class="flex items-start gap-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-burgundy-600 to-burgundy-800 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-microphone-lines text-3xl text-white"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-serif font-bold text-gray-900 mb-2">Toastmaster (Olib Boruvchi)</h3>
+                            <p class="text-gray-600 mb-4">Tajribali toastmaster — dasturni qiziqarli va jonli olib boradi.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gold-600 font-semibold">Kelishiladi</span>
+                                <button onclick="selectService('Toastmaster')" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-semibold">
+                                    Buyurtma
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transport -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover md:col-span-2" data-aos="fade-up">
+                    <div class="flex items-start gap-4">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-bus text-3xl text-white"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-serif font-bold text-gray-900 mb-2">Transport Xizmati</h3>
+                            <p class="text-gray-600 mb-4">Kelin-kuyovni olib kelish va olib borish uchun bezatilgan transport.</p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-gold-600 font-semibold">Kelishiladi</span>
+                                <button onclick="selectService('Transport xizmati')" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-semibold">
+                                    Buyurtma
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vidograf & Artist Section -->
+    <section id="vidograf" class="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <div class="inline-block bg-gradient-to-r from-gold-400 to-gold-600 text-white px-6 py-2 rounded-full font-bold mb-4">
+                    ⭐ TOP XIZMATLAR
+                </div>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mb-4">Vidograf & Artist</h2>
+                <div class="w-24 h-1 bg-gold-500 mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-300 max-w-2xl mx-auto">Ushbu xizmatlar asosiy narxdan TASHQARI — alohida kelishiladi</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Vidograf -->
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20" data-aos="fade-right">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-video text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold">🎥 Vidograf</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6">Professional video suratga olish xizmatlari — xotirani abadiy saqlash uchun</p>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white/5 rounded-xl p-4 hover:bg-white/10 transition-colors">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="font-semibold text-lg">Standart Paket</h4>
+                                <span class="text-gold-400 font-bold">500 000 so'm</span>
+                            </div>
+                            <p class="text-sm text-gray-400">1 kamera, montaj, USB yetkazib berish</p>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-gold-600/20 to-gold-600/10 rounded-xl p-4 border border-gold-500/30">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="font-semibold text-lg">Premium Paket</h4>
+                                <span class="text-gold-400 font-bold">1 000 000 so'm</span>
+                            </div>
+                            <p class="text-sm text-gray-300">2 kamera, drone, 4K, professional montaj, klip</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artist -->
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20" data-aos="fade-left">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 bg-gradient-to-br from-burgundy-600 to-burgundy-800 rounded-full flex items-center justify-center">
+                            <i class="fas fa-music text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-serif font-bold">🎤 Artist / Xonanda</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6">Mashhur artistlar bilan to'yingizni unutilmas qiling — alohida kelishiladi</p>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white/5 rounded-xl p-4 hover:bg-white/10 transition-colors">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="font-semibold text-lg">Mahalliy Artist</h4>
+                                <span class="text-gold-400 font-bold">~3 000 000 so'm</span>
+                            </div>
+                            <p class="text-sm text-gray-400">Sirdaryo va viloyat xonandalar</p>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-burgundy-800/30 to-burgundy-800/10 rounded-xl p-4 border border-burgundy-500/30">
+                            <div class="flex justify-between items-center mb-2">
+                                <h4 class="font-semibold text-lg">Taniqli Artist</h4>
+                                <span class="text-gold-400 font-bold">~4 000 000 so'm</span>
+                            </div>
+                            <p class="text-sm text-gray-300">Respublika darajasidagi xonandalar</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 bg-yellow-500/20 border border-yellow-500/40 rounded-lg p-4">
+                        <p class="text-sm text-yellow-300">
+                            <i class="fas fa-exclamation-triangle mr-2"></i>
+                            Artist narxi aniq artist va sana bo'yicha alohida kelishiladi. Yuqoridagi narxlar taxminiy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Telegram Bot Section -->
+    <section id="telegram" class="py-20 bg-gradient-to-br from-blue-500 to-blue-600 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <i class="fab fa-telegram text-9xl absolute top-10 left-10"></i>
+            <i class="fab fa-telegram text-9xl absolute bottom-10 right-10"></i>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-4xl mx-auto text-center" data-aos="zoom-in">
+                <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fab fa-telegram text-5xl text-blue-500"></i>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6">✈️ MALIKA Telegram Bot</h2>
+                <p class="text-xl mb-8 text-blue-100">Bizning Telegram botimiz orqali narxlarni bilish, zakaz berish va savollaringizga javob olish endi juda oson!</p>
+                <p class="text-lg mb-10 text-blue-100">Bot 24/7 ishlaydi — istalgan vaqtda murojaat qiling.</p>
+                
+                <div class="flex flex-wrap justify-center gap-4 mb-10">
+                    <span class="bg-white/20 backdrop-blur px-4 py-2 rounded-full"><i class="fas fa-money-bill mr-2"></i>Narxlar ro'yxati</span>
+                    <span class="bg-white/20 backdrop-blur px-4 py-2 rounded-full"><i class="fas fa-calendar mr-2"></i>Bo'sh kunlar</span>
+                    <span class="bg-white/20 backdrop-blur px-4 py-2 rounded-full"><i class="fas fa-file-signature mr-2"></i>Zakaz berish</span>
+                    <span class="bg-white/20 backdrop-blur px-4 py-2 rounded-full"><i class="fas fa-headset mr-2"></i>Operator bilan bog'lanish</span>
+                    <span class="bg-white/20 backdrop-blur px-4 py-2 rounded-full"><i class="fas fa-utensils mr-2"></i>Menyu ko'rish</span>
+                </div>
+                
+                <a href="https://t.me/malika_toyxona_bot" target="_blank" class="inline-flex items-center gap-3 bg-white text-blue-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-colors shadow-xl">
+                    <i class="fab fa-telegram text-2xl"></i>
+                    @malika_toyxona_bot ga o'tish
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="zakaz" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">Zakaz Bering</h2>
+                    <div class="w-24 h-1 gradient-gold mx-auto rounded-full"></div>
+                    <p class="mt-4 text-gray-600">Formani to'ldiring — tez orada siz bilan bog'lanamiz</p>
+                </div>
+
+                <form id="orderForm" class="bg-gray-50 rounded-2xl p-8 md:p-10 shadow-xl" data-aos="fade-up">
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Ismingiz <span class="text-red-500">*</span></label>
+                            <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-gold-500 focus:ring-2 focus:ring-gold-200 outline-none transition-all" placeholder="Ismingizni kiriting">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Telefon raqam <span class="text-red-500">*</span></label>
+                            <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-gold-500 focus:ring-2 focus:ring-gold-200 outline-none transition-all" placeholder="+998 __ ___ __ __">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Tadbir turi <span class="text-red-500">*</span></label>
+                            <select name="event_type" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-gold-500 focus:ring-2 focus:ring-gold-200 outline-none transition-all">
+                                <option value="">— Tanlang —</option>
+                                <option value="Osh to'y (Nikoh to'y)">Osh to'y (Nikoh to'y)</option>
+                                <option value="Sunnat to'yi">Sunnat to'yi</option>
+                                <option value="Xudoyi / Gap">Xudoyi / Gap</option>
+                                <option value="To'liq premium paket">To'liq premium paket</option>
+                                <option value="Boshqa">Boshqa</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Mehmonlar soni <span class="text-red-500">*</span></label>
+                            <select name="guests" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-gold-500 focus:ring-2 focus:ring-gold-200 outline-none transition-all">
+                                <option value="">— Tanlang —</option>
+                                <option value="100 gacha">100 gacha</option>
+                                <option value="100–200 kishi">100–200 kishi</option>
+                                <option value="200–300 kishi">200–300 kishi</option>
+                                <option value="300–500 kishi">300–500 kishi</option>
+                                <option value="500 dan ko'p">500 dan ko'p</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Tadbir sanasi <span class="text-red-500">*</span></label>
+                            <input type="date" name="date" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-gold-500 focus:ring-2 focus:ring-gold-200 outline-none transition-all">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Qo'shimcha xizmat</label>
+                            <select name="additional" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-gold-500 focus:ring-2 focus:ring-gold-200 outline-none transition-all">
+                                <option value="Kerak emas">Kerak emas</option>
+                                <option value="Vidograf — 500 000 (standart)">Vidograf — 500 000 (standart)</option>
+                                <option value="Vidograf — 1 000 000 (premium)">Vidograf — 1 000 000 (premium)</option>
+                                <option value="Artist (kelishiladi)">Artist (kelishiladi)</option>
+                                <option value="Vidograf + Artist">Vidograf + Artist</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">Qo'shimcha izoh</label>
+                            <textarea name="comment" rows="3" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-gold-500 focus:ring-2 focus:ring-gold-200 outline-none transition-all" placeholder="Qo'shimcha ma'lumotlar..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full btn-primary text-white py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all">
+                            <i class="fas fa-paper-plane mr-2"></i>Zakazni yuborish
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="aloqa" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold mb-4">Biz bilan bog'laning</h2>
+                <div class="w-24 h-1 gradient-gold mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-400">Aloqa Ma'lumotlari</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div class="bg-white/5 backdrop-blur rounded-2xl p-6 text-center hover:bg-white/10 transition-colors" data-aos="fade-up" data-aos-delay="0">
+                    <div class="w-16 h-16 bg-gradient-to-br from-gold-400 to-gold-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-phone text-2xl text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Telefon</h3>
+                    <a href="tel:+998951558784" class="text-gold-400 hover:text-gold-300 transition-colors">+998 95 155 87 84</a>
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur rounded-2xl p-6 text-center hover:bg-white/10 transition-colors" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-burgundy-600 to-burgundy-800 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-map-marker-alt text-2xl text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Manzil</h3>
+                    <p class="text-gray-300">Sirdaryo tumani<br>Ulug'bek mahallasi</p>
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur rounded-2xl p-6 text-center hover:bg-white/10 transition-colors" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clock text-2xl text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Ish vaqti</h3>
+                    <p class="text-gray-300">08:00 – 22:00<br>Har kuni</p>
+                </div>
+                
+                <div class="bg-white/5 backdrop-blur rounded-2xl p-6 text-center hover:bg-white/10 transition-colors" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-telegram text-2xl text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Telegram</h3>
+                    <a href="https://t.me/malika_toyxona_bot" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors">Botga yozish</a>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="https://t.me/malika_toyxona_bot" target="_blank" class="inline-flex items-center gap-3 bg-blue-500 hover:bg-blue-600 text-white px-8 py-3 rounded-full font-semibold transition-colors">
+                    <i class="fab fa-telegram text-xl"></i>
+                    Telegram botga yozish
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-white py-12 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-2xl font-serif font-bold mb-4">✦ MALIKA</h3>
+                    <p class="text-gray-400">Sirdaryo tumanidagi eng chiroyli va ishonchli toyxona. Sizning bayramingiz — bizning faxrimiz.</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-gold-400">Menyu</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#menyu" class="text-gray-400 hover:text-gold-400 transition-colors">Toy turlari</a></li>
+                        <li><a href="#menyu" class="text-gray-400 hover:text-gold-400 transition-colors">Ovqatlar</a></li>
+                        <li><a href="#vidograf" class="text-gray-400 hover:text-gold-400 transition-colors">Vidograf</a></li>
+                        <li><a href="#vidograf" class="text-gray-400 hover:text-gold-400 transition-colors">Artist</a></li>
+                        <li><a href="#zakaz" class="text-gray-400 hover:text-gold-400 transition-colors">Zakaz bering</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-gold-400">Aloqa</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone mr-2 text-gold-400"></i> 95-155-8784</li>
+                        <li><i class="fas fa-map-marker-alt mr-2 text-gold-400"></i> Sirdaryo tumani</li>
+                        <li><i class="fas fa-home mr-2 text-gold-400"></i> Ulug'bek mahallasi</li>
+                        <li><i class="fab fa-telegram mr-2 text-gold-400"></i> <a href="https://t.me/malika_toyxona_bot" class="hover:text-gold-400 transition-colors">Telegram Bot</a></li>
+                        <li><i class="fas fa-clock mr-2 text-gold-400"></i> 08:00 – 22:00</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>© 2025 MALIKA Toyxonasi — Sirdaryo tumani, Ulug'bek mahallasi · Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Menu Modal -->
+    <div id="menuModal" class="modal">
+        <div class="modal-content bg-white rounded-2xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="sticky top-0 bg-white border-b border-gray-200 p-6 flex justify-between items-center rounded-t-2xl">
+                <h3 class="text-3xl font-serif font-bold text-gray-900">🍽️ To'liq Menyu</h3>
+                <button onclick="closeMenuModal()" class="text-gray-500 hover:text-gray-700 text-3xl">&times;</button>
+            </div>
+            <div class="p-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                        <img src="https://images.unsplash.com/photo-1606756790138-7c48643e2977?w=400&h=300&fit=crop" alt="Osh" class="w-24 h-24 object-cover rounded-lg">
+                        <div>
+                            <h4 class="font-bold text-lg">Osh (Palov)</h4>
+                            <p class="text-gray-600 text-sm">An'anaviy o'zbek palovi — har bir to'yning asosi</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                        <img src="https://images.unsplash.com/photo-1563379928570-0162f846a2e3?w=400&h=300&fit=crop" alt="Manti" class="w-24 h-24 object-cover rounded-lg">
+                        <div>
+                            <h4 class="font-bold text-lg">Manti</h4>
+                            <p class="text-gray-600 text-sm">Bug'da pishirilgan qo'l manti — go'sht va piyoz</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                        <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&h=300&fit=crop" alt="No'xot Sho'rva" class="w-24 h-24 object-cover rounded-lg">
+                        <div>
+                            <h4 class="font-bold text-lg">No'xot Sho'rva</h4>
+                            <p class="text-gray-600 text-sm">Qo'zilik go'sht va no'xot bilan</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                        <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&h=300&fit=crop" alt="Napar" class="w-24 h-24 object-cover rounded-lg">
+                        <div>
+                            <h4 class="font-bold text-lg">Napar Sho'rva</h4>
+                            <p class="text-gray-600 text-sm">Milliy Sirdaryo napar sho'rvasi</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                        <img src="https://images.unsplash.com/photo-1552611052-33e04de081de?w=400&h=300&fit=crop" alt="Lag'mon" class="w-24 h-24 object-cover rounded-lg">
+                        <div>
+                            <h4 class="font-bold text-lg">Lag'mon</h4>
+                            <p class="text-gray-600 text-sm">Qo'l yoylgan uy lag'moni</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
+                        <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=400&h=300&fit=crop" alt="Kabob" class="w-24 h-24 object-cover rounded-lg">
+                        <div>
+                            <h4 class="font-bold text-lg">Kabob</h4>
+                            <p class="text-gray-600 text-sm">Tandirda pishirilgan kabob</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS Animation Library
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Counter animation
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const inc = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + inc);
+                    setTimeout(animateCounters, 20);
+                } else {
+                    counter.innerText = target + (target === 4.9 ? '' : '+');
+                }
+            });
+        };
+
+        // Trigger counters when in viewport
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        const statsSection = document.getElementById('stats');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+
+        // Menu Modal
+        function openMenuModal() {
+            document.getElementById('menuModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenuModal() {
+            document.getElementById('menuModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('menuModal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('menuModal')) {
+                closeMenuModal();
+            }
+        });
+
+        // Select service and scroll to order form
+        function selectService(serviceName) {
+            const eventTypeSelect = document.querySelector('select[name="event_type"]');
+            if (eventTypeSelect) {
+                eventTypeSelect.value = serviceName;
+            }
+            document.getElementById('zakaz').scrollIntoView({ behavior: 'smooth' });
+            
+            Swal.fire({
+                icon: 'success',
+                title: 'Xizmat tanlandi!',
+                text: `${serviceName} - Buyurtma formasini to'ldiring`,
+                confirmButtonColor: '#D4AF37',
+                timer: 2000
+            });
+        }
+
+        // Form submission
+        document.getElementById('orderForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            Swal.fire({
+                icon: 'success',
+                title: '✅ Zakazingiz qabul qilindi!',
+                text: 'Tez orada siz bilan bog\'lanamiz. Rahmat!',
+                confirmButtonColor: '#D4AF37',
+                confirmButtonText: 'Yaxshi'
+            });
+            
+            e.target.reset();
+        });
+
+        // Phone number formatting
+        document.querySelector('input[name="phone"]').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.startsWith('998')) {
+                value = value.substring(3);
+            }
+            
+            let formattedValue = '+998 ';
+            if (value.length > 0) {
+                formattedValue += value.substring(0, 2);
+            }
+            if (value.length >= 2) {
+                formattedValue += ' ' + value.substring(2, 5);
+            }
+            if (value.length >= 5) {
+                formattedValue += ' ' + value.substring(5, 7);
+            }
+            if (value.length >= 7) {
+                formattedValue += ' ' + value.substring(7, 9);
+            }
+            
+            e.target.value = formattedValue;
+        });
+
+        // Set minimum date to today
+        const dateInput = document.querySelector('input[name="date"]');
+        if (dateInput) {
+            const today = new Date().toISOString().split('T')[0];
+            dateInput.setAttribute('min', today);
+        }
+
+        // Smooth scroll for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Menu Tabs Functionality
+        document.querySelectorAll('.menu-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                document.querySelectorAll('.menu-tab').forEach(t => {
+                    t.classList.remove('active');
+                });
+                
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                // Filter menu items
+                const category = tab.getAttribute('data-category');
+                document.querySelectorAll('.menu-item').forEach(item => {
+                    if (category === 'all' || item.getAttribute('data-category') === category) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 100);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
